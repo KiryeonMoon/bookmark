@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Confirm Delete{%endblock title %}
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="aler aler-danger">
+      Do you want to delete Bookmark "{{object}}"?
+    </div>
+    <input type="submit" value="Delete" class="btn btn-danger" />
+  </form>
+{% endblock content %}
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Title</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="aler aler-danger">
+        Do you want to delete Bookmark "{{object}}"?
+      </div>
+      <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+  </body>
+</html>
+{% endcomment %}
+
